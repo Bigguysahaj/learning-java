@@ -63,4 +63,44 @@ Thread-0: 4
 
 === Code Execution Successful ===
 ```
+- But saddly, can't always extend Thread, so have to implement Runnable
+  - ```java
+    class MyRunnable implements Runnable {
+    public void run() {
+        // Code to be executed by the thread
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Thread.currentThread().getName() + ": " + i);
+            try {
+                Thread.sleep(1000); // Simulate some processing time
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new thread
+        Thread thread1 = new Thread(new MyRunnable());
+        
+        // Start the thread
+        thread1.start();
+        
+        // Main thread continues its execution
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Thread.currentThread().getName() + ": " + i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
+  - Race condition, concurrent update of shared variable can lead to data inconsistency
+  - Critical sections, sections of code where shared variables are updated
+  - Mutual exclustions ; at most one thread at a time can be in a critical section
+
+- Semaphores : semaphores is like a variable
