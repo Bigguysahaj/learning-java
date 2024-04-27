@@ -105,6 +105,10 @@ public class Main {
 
 - Semaphores : semaphores is like a variable
 
+### join()
+
+- join is similar to await in js/ts
+
 ### Threadsafe
 
 - say you an `account[100]` and so your mother wants to add 100 to your account and your father 200, and say your account already had 200 
