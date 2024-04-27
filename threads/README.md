@@ -111,7 +111,9 @@ public class Main {
 
 ### Threadsafe
 
-- say you an `account[100]` and so your mother wants to add 100 to your account and your father 200, and say your account already had 200 
-therefore, threadsafe collection garuntees this outpute : 200 + 100 + 200
+- would not generate `ConcurrentModificationException
+- example, using ConcurrentHashMap
+- say you an `account[100]` and so your mother wants to `add 100` to your account and your father `200`, and say your account already had 200 
+therefore, threadsafe collection garuntees this output : `200 + 100 + 200`
 
 
