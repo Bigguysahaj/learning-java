@@ -49,5 +49,6 @@
       String var = "some value, but could be null"
       var = null
       Optional.ofNullable(var)
-      ```  
+      ```
+     
   
