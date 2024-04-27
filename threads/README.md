@@ -64,7 +64,7 @@ Thread-0: 4
 === Code Execution Successful ===
 ```
 - But saddly, can't always extend Thread, so have to implement Runnable
-  - ```java
+```java
     class MyRunnable implements Runnable {
     public void run() {
         // Code to be executed by the thread
@@ -104,3 +104,10 @@ public class Main {
   - Mutual exclustions ; at most one thread at a time can be in a critical section
 
 - Semaphores : semaphores is like a variable
+
+### Threadsafe
+
+- say you an `account[100]` and so your mother wants to add 100 to your account and your father 200, and say your account already had 200 
+therefore, threadsafe collection garuntees this outpute : 200 + 100 + 200
+
+
